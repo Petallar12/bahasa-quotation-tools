@@ -345,7 +345,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
       };
   
       const result = await axios.post(
-        "https://quotation-tool-backend.vercel.app/send-email", // Updated to deployed backend URL
+        "https://bahasa-quotation-tool-backend.vercel.app/send-email", // Updated to deployed backend URL
         emailPayload
       );
       displayMessage("Email successfully sent!", "submitApplication");
@@ -367,65 +367,66 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
     {/* {showMessage && <p className="alert alert-info">{message}</p>} */}
 
       <h1 className="text-center mb-2">
-        I would like to know more about{" "}
-        <span style={{ color: "#151577" }}>MyHealth</span> Family Discount
+        {/* I would like to know more about{" "} */}
+        Saya ingin tahu lebih banyak tentang{" "} 
+        <span style={{ color: "#151577" }}>MyHealth</span> {/*Family Discount*/} Diskon Keluarga
       </h1>
-      <h5 className="text-center mb-2">MyHealth can accept applications from people aged 60 years or younger. To find out the best and discounted plan for <br></br>you and your family, you'll need to provide some information:</h5>
+      <h5 className="text-center mb-2">MyHealth dapat menerima aplikasi dari orang-orang yang berusia 60 tahun atau lebih muda. Untuk mengetahui rencana terbaik dan diskon untuk <br></br>Anda dan keluarga Anda, Anda perlu menyediakan beberapa informasi:</h5>
       <h4 className="text-left mt-4">
-        <span style={{ color: "#151577" }}>Plans</span>
+        <span style={{ color: "#151577" }}>Rencana</span>
       </h4>
       <div className="responsive-table">
   <table className="table table-bordered table-striped mt-3 text-center plan">     
     <thead>
         <tr>
-            <th>Modules</th>
-            <th>Core</th>
-            <th>Essential</th>
-            <th>Extensive</th>
-            <th>Elite</th>
+            <th>Modul</th>
+            <th>Inti</th>
+            <th>Esensial</th>
+            <th>Ekstensif</th>
+            <th>Elit</th>
         </tr>
       </thead>      
       <tbody>
         <tr>
-            <td>Hospital Surgery <br></br>
-                Annual limit per person per period of insurance<br></br>
-                -Standard private room<br></br>
-                -Emergency dental treatment<br></br>
-                -Diagnostic scans and test <br></br>
-                6 levels of deductibles: $0, $500, $1000, $2,500, $5,000 or $10,000
-            </td>
-            <td>$300,000</td>
-            <td>$1,000,000</td>
-            <td>$2,500,000</td>
-            <td>$3,000,000</td>
+          <td>Operasi Rumah Sakit <br></br>
+              Batas tahunan per orang per periode asuransi<br></br>
+              - Kamar pribadi standar<br></br>
+              - Perawatan gigi darurat<br></br>
+              - Pemindaian diagnostik dan tes <br></br>
+              6 tingkat pemotongan: $0, $500, $1000, $2,500, $5,000 atau $10,000
+          </td>
+          <td>$300,000</td>
+          <td>$1,000,000</td>
+          <td>$2,500,000</td>
+          <td>$3,000,000</td>
         </tr>
         <tr>
-            <td>Outpatient (Optional)</td>
-            <td>$2,000</td>
-            <td>$5,000</td>
-            <td>Full Cover</td>
-            <td>Full Cover</td>
+          <td>Rawat Jalan (Opsional)</td>
+          <td>$2,000</td>
+          <td>$5,000</td>
+          <td>Cakupan Penuh</td>
+          <td>Cakupan Penuh</td>
         </tr>
         <tr>
-            <td>Maternity (Optional)</td>
-            <td>Not Available</td>
-            <td>$5,000 per pregnancy</td>
-            <td>$8,000 per pregnancy</td>
-            <td>$15,000 per pregnancy</td>
+          <td>Maternitas (Opsional)</td>
+          <td>Tidak Tersedia</td>
+          <td>$5,000 per kehamilan</td>
+          <td>$8,000 per kehamilan</td>
+          <td>$15,000 per kehamilan</td>
         </tr>
         <tr>
-            <td>Dental and Optical (Optional)</td>
-            <td>.</td>
-            <td>..</td>
-            <td>...</td>
-            <td>....</td>
+          <td>Dental dan Optikal (Opsional)</td>
+          <td>.</td>
+          <td>..</td>
+          <td>...</td>
+          <td>....</td>
         </tr>
         <tr>
-            <td>24/7 Evacuation, repatriation and assistance services</td>
-            <td>Included up to $1,000,000</td>
-            <td>Included up to $1,000,000</td>
-            <td>Included up to $1,000,000</td>
-            <td>Included up to $3,000,000</td>
+          <td>Layanan evakuasi, repatriasi, dan bantuan 24/7</td>
+          <td>Termasuk hingga $1,000,000</td>
+          <td>Termasuk hingga $1,000,000</td>
+          <td>Termasuk hingga $1,000,000</td>
+          <td>Termasuk hingga $3,000,000</td>
         </tr>
       </tbody>
 
@@ -433,36 +434,36 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
     </div>
       <h4 className="text-left mb-4">
         {" "}
-        <span style={{ color: "#151577" }}>Contact Information</span>
+        <span style={{ color: "#151577" }}>Informasi Kontak</span>
       </h4>
       <div className="row mb-3">
         <div className="col-md-3">
-          <label className="field_name">Full Name:</label>
+          <label className="field_name">Nama Lengkap:</label>
           <input type="text"className={`form-control ${!isValid.fullNameValid && 'invalid-field'}`}name="fullName" value={contactInfo.fullName} onChange={handleContactInfoChange}  required/>
         </div>
         <div className="col-md-2">
-          <label className="field_name">Contact Number:</label>
+          <label className="field_name">Nomor Kontak:</label>
           <input type="text" className={`form-control ${!isValid.contactNumberValid && 'invalid-field'}`} name="contactNumber" value={contactInfo.contactNumber} onChange={handleContactInfoChange}required/>
         </div>
         
         <div className="col-md-3">
-          <label className="field_name">Email Address:</label>
+          <label className="field_name">Alamat Email:</label>
           <input type="email" className={`form-control ${!isValid.emailAddressValid && 'invalid-field'}`} name="emailAddress" value={contactInfo.emailAddress} onChange={handleContactInfoChange}required/>
         </div>
         <div className="col-md-2">
-          <label className="field_name">Country of Residence:</label>
+          <label className="field_name">Negara Tempat Tinggal:</label>
           <select className="form-control" name="country_residence" value={contactInfo.country_residence}>
               <option value="Indonesia">Indonesia</option>
           </select>
         </div>
         <div className="col-md-2">
-          <label className="field_name">Nationality:</label>
+          <label className="field_name">Kewarganegaraan:</label>
           <input type="text"  className={`form-control ${!isValid.nationalityValid && 'invalid-field'}`} name="nationality" value={contactInfo.nationality}onChange={handleContactInfoChange} required/>
         </div>
       </div>
       <h4 className="text-left mb-4">
         {" "}
-        <span style={{ color: "#151577" }}>Policy Information</span>
+        <span style={{ color: "#151577" }}>Informasi Polis</span>
       </h4>
       <form onSubmit={handleSubmit}>
         {/* <div className="d-flex justify-content-end mb-2">
@@ -477,7 +478,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <div>
               <div className="row">
               <div className="col-md-3">
-        <label className="field_name">Name:</label>
+        <label className="field_name">Nama:</label>
         <input
           type="text"
           className={`form-control ${!client.isValid.nameValid && 'invalid-field'}`}
@@ -488,7 +489,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
         />
       </div>
       <div className="col-md-1">
-        <label className="field_name">Age:</label>
+        <label className="field_name">Umur:</label>
         <input
           type="number"
           min="0"
@@ -506,24 +507,24 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
         />
       </div>
       <div className="col-md-3">
-        <label className="field_name">Gender:</label>
+        <label className="field_name">Jenis Kelamin:</label>
         <select
           className={`form-select dropdown-font ${!client.isValid.genderValid && 'invalid-field'}`}
           name="gender"
           value={client.gender}
           onChange={(e) => handleClientChange(index, e)}
         >
-          <option value="">Select</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
+          <option value="">Pilih</option>
+          <option value="Male">Laki-laki</option>
+          <option value="Female">Perempuan</option>
         </select>
       </div>
                 <div className="col-md-3">
-                  <label className="field_name">Relationship:</label>
+                  <label className="field_name">Hubungan:</label>
                   <select className="form-select dropdown-font" name="relationship" value={client.relationship} onChange={(e) => handleClientChange(index, e)}required>
-                    <option value="">Select</option>
-                    <option value="Main Applicant">Main Applicant</option>
-                    <option value="Dependent">Dependent</option>
+                    <option value="">Pilih</option>
+                    <option value="Main Applicant">Pemohon Utama</option>
+                    <option value="Dependent">Tanggungan</option>
                   </select>
                 </div>
                  {/* Conditionally render the Add Dependent button only for the first client */}
@@ -547,11 +548,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
     </div></div>
         ))}
         <div className="col-md-3">
-        <label className="field_name">Area of Coverage:</label>
+        <label className="field_name">Area Cakupan:</label>
                 <select className="form-select dropdown-font"name="area_of_coverage"value={contactInfo.area_of_coverage}onChange={handleContactInfoChange}>
-                           <option value="Worldwide">Worldwide</option>
-                            <option value="Worldwide excl USA">Worldwide excl USA</option>
-                            <option value="ASEAN Ex. SG">ASEAN Ex. SG</option>
+                           <option value="Worldwide">Seluruh Dunia</option>
+                            <option value="Worldwide excl USA">Seluruh Dunia kecuali AS</option>
+                            <option value="ASEAN Ex. SG">ASEAN kec. SG</option>
                 </select>
                 </div>
 
@@ -560,13 +561,12 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
           <span style={{ color: "#151577" }}>April (MyHEALTH) Indonesia</span>
         </h4>  
     <div>
-    <h5 className="mt-3 col-md-12">
-      Family Discount Percentage: 
+    <h5 className="mt-3 col-md-12">Persentase Diskon Keluarga: 
       {" "}<span style={{ color: getFamilyDiscountPercentage(clients.length) > 0 ? 'green' : 'black' }}>
       {getFamilyDiscountPercentage(clients.length)}%
     </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Area of Coverage: {contactInfo.area_of_coverage}
+      Area Cakupan: {contactInfo.area_of_coverage}
     </h5>
   </div>  
   </div>   
@@ -576,32 +576,33 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
 <div>
     <div className="table-responsive"> 
     <table className="table table-bordered table-striped plan">
-      <thead>
+    <thead>
         <tr>
-          <th>Client</th>
-          <th colSpan={2}>Hospital & Surgery</th>
-          <th colSpan={2}>Outpatient</th>
-          <th colSpan={2}>Maternity</th>
+          <th>Klien</th>
+          <th colSpan={2}>Rumah Sakit & Operasi</th>
+          <th colSpan={2}>Rawat Jalan</th>
+          <th colSpan={2}>Maternitas</th>
           <th colSpan={2}>Dental</th>
           <th>Subtotal</th>
         </tr>
 
         <tr>
-        <th></th>
-        <th><div className="d-flex justify-content-between"><span>Plan & Room</span>
-        <span>Deductible</span></div></th>
-        <th>Premium</th>
-        <th><div className="d-flex justify-content-between">
-          <span>Plan & Room</span>
-        <span>Co Ins.</span></div></th>
-        <th>Premium</th>
-        <th>Plan & Room</th>
-        <th>Premium</th>
-        <th>Plan & Room</th>
-        <th>Premium</th>
-        <th></th>
+          <th></th>
+          <th><div className="d-flex justify-content-between"><span>Rencana & Kamar</span>
+          <span>Pemotongan</span></div></th>
+          <th>Premi</th>
+          <th><div className="d-flex justify-content-between">
+            <span>Rencana & Kamar</span>
+          <span>Ko Asuransi.</span></div></th>
+          <th>Premi</th>
+          <th>Rencana & Kamar</th>
+          <th>Premi</th>
+          <th>Rencana & Kamar</th>
+          <th>Premi</th>
+          <th></th>
         </tr>
       </thead>
+
       <tbody>
         {response.map((rate, index) => (
           <tr key={index}>
@@ -613,10 +614,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td>
               <div className="d-flex gap-2">
                 <select className="form-select dropdown-font" value={clients[index].plans.hs} onChange={(e) => handlePlanChange(index, "hs", e.target.value)}>
-                  <option value="Elite">Elite</option>
-                  <option value="Extensive">Extensive</option>
-                  <option value="Essential">Essential</option>
-                  <option value="Core">Core</option>
+                  <option value="Elite">Elit</option>
+                  <option value="Extensive">Ekstensif</option>
+                  <option value="Essential">Esensial</option>
+                  <option value="Core">Inti</option>
+
                 </select>
                 <select className="form-select dropdown-font" value={clients[index].plans.hs_deductible} onChange={(e) => handlePlanChange(index, "hs_deductible", e.target.value)}>
                   <option value="Nil">Nil</option>
@@ -631,11 +633,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td>
               <div className="d-flex gap-2">
                 <select className="form-select dropdown-font" value={clients[index].plans.op} onChange={(e) => handlePlanChange(index, "op", e.target.value)}>
-                  <option value="N/A">None</option>
-                  <option value="Elite">Elite</option>
-                  <option value="Extensive">Extensive</option>
-                  <option value="Essential">Essential</option>
-                  <option value="Core">Core</option>
+                  <option value="Elite">Elit</option>
+                  <option value="Extensive">Ekstensif</option>
+                  <option value="Essential">Esensial</option>
+                  <option value="Core">Inti</option>
+
                 </select>
                 <select className="form-select dropdown-font" value={clients[index].plans.op_co_ins} onChange={(e) => handlePlanChange(index, "op_co_ins", e.target.value)}>
                   <option value="Nil">Nil</option>
@@ -647,22 +649,23 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td className="premium">USD {rate.op !== "N/A" ? rate.op.toLocaleString() : "N/A"}</td>
             <td>
               <select className="form-select dropdown-font" value={clients[index].plans.ma} onChange={(e) => handlePlanChange(index, "ma", e.target.value)}>
-                <option value="N/A">None</option>
-                <option value="Elite">Elite</option>
-                <option value="Extensive">Extensive</option>
-                <option value="Essential">Essential</option>
-                <option value="Core">Core</option>
+                <option value="N/A">Tidak Ada</option>
+                <option value="Elite">Elit</option>
+                <option value="Extensive">Ekstensif</option>
+                <option value="Essential">Esensial</option>
+                <option value="Core">Inti</option>
+
               </select>
               {/* Premium: {rate.ma !== "N/A" ? rate.ma.toLocaleString() : "N/A"} */}
             </td>
             <td className="premium">USD {rate.ma !== "N/A" ? rate.ma.toLocaleString() : "N/A"}</td>
             <td>
               <select className="form-select dropdown-font" value={clients[index].plans.dn} onChange={(e) => handlePlanChange(index, "dn", e.target.value)}>
-                <option value="N/A">None</option>
-                <option value="Elite">Elite</option>
-                <option value="Extensive">Extensive</option>
-                <option value="Essential">Essential</option>
-                <option value="Core">Core</option>
+                <option value="N/A">Tidak Ada</option>
+                <option value="Elite">Elit</option>
+                <option value="Extensive">Ekstensif</option>
+                <option value="Essential">Esensial</option>
+                <option value="Core">Inti</option>
               </select>
               {/* Premium: {rate.dn !== "N/A" ? rate.dn.toLocaleString() : "N/A"} */}
             </td>
@@ -679,7 +682,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
         ))}
           <tr>
             <td colSpan="9" className="text-end fw-bold">
-              Total Annual Premium:
+              Total Premi Tahunan:
             </td>
             <td className="fw-bold">
               USD {Number(calculateTotalPremium()).toLocaleString()}
@@ -691,22 +694,24 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
 )}
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px", }}>
   <button onClick={handleSubmit} disabled={loadingState.getRates} className="btn btn-success enhanced-button">
-    {loadingState.getRates ? <BtnLoader /> : "Calculate"}
+    {loadingState.getRates ? <BtnLoader /> : "Hitung"}
   </button>
   {showMessage && messageType === 'getRates' && <p className="error-message">{message}</p>}
 </div>
 
       </form>
-            <p className="text-center mt-4" style={{ fontSize: '12px' }}>
-              By clicking on <b>Talk to Sales</b> you agree that your data may be used by Medishure to contact you by<br></br>phone or email your insurance application. Find more information on the processing of your<br></br> data in our{" "}
-  <span style={{ color: "Red", cursor: "pointer" }} data-bs-toggle="modal" data-bs-target="#personalDataPolicyModal">
-    Personal Data Policy
-  </span>.</p>
+      <p className="text-center mt-4" style={{ fontSize: '12px' }}>
+        Dengan mengklik <b>Bicara dengan Penjualan</b> Anda setuju bahwa data Anda dapat digunakan oleh Medishure untuk menghubungi Anda melalui<br></br>telepon atau email terkait aplikasi asuransi Anda. Temukan lebih banyak informasi mengenai pemrosesan data<br></br>Anda di{" "}
+        <span style={{ color: "Red", cursor: "pointer" }} data-bs-toggle="modal" data-bs-target="#personalDataPolicyModal">
+          Kebijakan Data Pribadi
+        </span>.
+      </p>
+
 
 {/* Below the Submit Application button */}
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px" }}>
   <button onClick={handleEmailSubmit} disabled={loadingState.submitApplication} className="btn btn-success enhanced-button">
-    {loadingState.submitApplication ? <BtnLoader /> : "Talk to Sales"}
+    {loadingState.submitApplication ? <BtnLoader /> : "Bicara dengan Penjualan"}
   </button>
   {showMessage && messageType === 'submitApplication' &&         <p className={submitMessageType === 'success' ? 'success-message' : 'error-message'}>
   {message}</p>}
@@ -723,8 +728,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="personalDataPolicyModalLabel">
-              Personal Data Policy
-            </h5>
+            Kebijakan Data Pribadi</h5>
             <button
               type="button"
               className="btn-close"
@@ -733,62 +737,63 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             ></button>
           </div>
           <div className="modal-body">
-              <p>
-                <b>Personal Data Privacy Policy</b><br/>
-                <b>Effective Date:</b> December 15, 2024<br/>
-                <br/>
-                <b>1. Introduction<br/></b>
-                <span style={{ fontSize: '14px' }}>Welcome to our April quote tool. At Luke Medikal International, we respect and value your privacy. This Personal Data Privacy Policy outlines how we collect, use, store, and protect your personal information when you use our quote form available at lukemedikal.co.id.
-                By using our quotation form, you consent to the terms of this policy.<br/></span>
-                <hr/><br/>
-                <b>2. Data Collection</b><br/>
-                <span style={{ fontSize: '14px' }}>When you submit a quote request through our form, we may collect the following Personal data:<br/>
-                &nbsp;•	Full Name<br/>
-                &nbsp;•	Contact Information (e.g., email address, phone number)<br/>
-                &nbsp;•	Location Details<br/>
-                &nbsp;•	Age & Gender<br/>
-                We collect this information solely for the purposes outlined below.<br/></span>
-                <hr/><br/>
-                <b>3. How We Use Your Information</b><br/>
-                <span style={{ fontSize: '14px' }}>We use the personal information collected through the quote form to:<br/>
-                &nbsp;&nbsp;•	Provide you with accurate quotes and pricing information.<br/>
-                &nbsp;&nbsp;•	Contact you to discuss your requirements or provide further assistance.<br/>
-                &nbsp;&nbsp;•	Improve our services and customer experience.<br/>
-                &nbsp;&nbsp;•	Maintain internal records for administrative purposes.<br/>
-                Your information will not be used for marketing purposes unless you provide explicit consent.<br/></span>
-                <hr/><br/>
-                <b>4. How We Store and Protect Your Information</b><br/>
-                <span style={{ fontSize: '14px' }}>We take appropriate technical and organizational measures to protect your personal data from unauthorized access, use, or disclosure. These include:<br/>
-                &nbsp;&nbsp;•	Secure data storage methods.<br/>
-                &nbsp;&nbsp;•	Limited access to personal data (only authorized personnel).<br/>
-                &nbsp;&nbsp;•	Encryption and security protocols to safeguard information transmitted online.<br/>
-                We retain your personal information only as long as necessary to fulfill the purpose for which it was collected or to comply with legal obligations.<br/></span>
-                <hr/><br/>
-                <b>5. Sharing of Your Information</b><br/>
-                <span style={{ fontSize: '14px' }}>We do not sell, rent, or trade your personal information to third parties. Your data may only be shared under the following circumstances:<br/>
-                &nbsp;&nbsp;•	With Your Consent: When you explicitly authorize us to share information.<br/>
-                &nbsp;&nbsp;•	Legal Requirements: If required by law, regulation, or valid legal process.<br/>
-                &nbsp;&nbsp;•	Service Providers: Trusted third parties who assist us in operating the quotation tool (e.g., email or hosting services).<br/></span>
-                <hr/><br/>
-                <b>6. Your Rights</b><br/>
-                <span style={{ fontSize: '14px' }}>Under applicable data protection laws, you have the right to:<br/>
-                &nbsp;&nbsp;•	Access the personal information we hold about you.<br/>
-                &nbsp;&nbsp;•	Correct any inaccuracies in your information.<br/>
-                &nbsp;&nbsp;•	Request deletion of your data where applicable.<br/>
-                &nbsp;&nbsp;•	Object to the processing of your data in certain circumstances.<br/>
-                To exercise these rights or if you have privacy-related concerns, please contact us at info@lukemedikal.co.id<br/></span>
-                <hr/><br/>
-                <b>7. Changes to This Policy</b><br/>
-                <span style={{ fontSize: '14px' }}>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The updated version will be posted on this page with the "Effective Date".<br/></span>
-                <hr/><br/>
-                <b>8. Contact Us</b><br/>
-                <span style={{ fontSize: '14px' }}>If you have any questions or concerns about this Privacy Policy or how your data is handled, please contact us:<br/>
-                Luke Medikal International<br/>
-                <b>Email: info@lukemedikal.co.id<br/>
-                Phone: +62 21 22604632<br/>
-                Website: https://lukemedikal.co.id</b></span>
-              </p>
-            </div>
+          <p>
+            <b>Kebijakan Privasi Data Pribadi</b><br/>
+            <b>Tanggal Berlaku:</b> 15 Desember 2024<br/>
+            <br/>
+            <b>1. Pendahuluan<br/></b>
+            <span style={{ fontSize: '14px' }}>Selamat datang di alat kutipan April kami. Di Luke Medikal Internasional, kami menghargai dan menghormati privasi Anda. Kebijakan Privasi Data Pribadi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi Anda saat Anda menggunakan formulir kutipan kami yang tersedia di lukemedikal.co.id.
+            Dengan menggunakan formulir kutipan kami, Anda menyetujui ketentuan kebijakan ini.<br/></span>
+            <hr/><br/>
+            <b>2. Pengumpulan Data</b><br/>
+            <span style={{ fontSize: '14px' }}>Ketika Anda mengirimkan permintaan kutipan melalui formulir kami, kami dapat mengumpulkan data Pribadi berikut:<br/>
+            &nbsp;• Nama Lengkap<br/>
+            &nbsp;• Informasi Kontak (misalnya, alamat email, nomor telepon)<br/>
+            &nbsp;• Detail Lokasi<br/>
+            &nbsp;• Usia & Jenis Kelamin<br/>
+            Kami mengumpulkan informasi ini semata-mata untuk tujuan yang dijelaskan di bawah ini.<br/></span>
+            <hr/><br/>
+            <b>3. Penggunaan Informasi Anda</b><br/>
+            <span style={{ fontSize: '14px' }}>Kami menggunakan informasi pribadi yang dikumpulkan melalui formulir kutipan untuk:<br/>
+            &nbsp;&nbsp;• Menyediakan Anda dengan kutipan dan informasi harga yang akurat.<br/>
+            &nbsp;&nbsp;• Menghubungi Anda untuk membahas kebutuhan Anda atau memberikan bantuan lebih lanjut.<br/>
+            &nbsp;&nbsp;• Meningkatkan layanan dan pengalaman pelanggan kami.<br/>
+            &nbsp;&nbsp;• Menjaga catatan internal untuk tujuan administratif.<br/>
+            Informasi Anda tidak akan digunakan untuk tujuan pemasaran kecuali Anda memberikan persetujuan eksplisit.<br/></span>
+            <hr/><br/>
+            <b>4. Penyimpanan dan Perlindungan Informasi Anda</b><br/>
+            <span style={{ fontSize: '14px' }}>Kami mengambil langkah teknis dan organisasi yang tepat untuk melindungi data pribadi Anda dari akses, penggunaan, atau pendedahan yang tidak sah. Ini termasuk:<br/>
+            &nbsp;&nbsp;• Metode penyimpanan data yang aman.<br/>
+            &nbsp;&nbsp;• Akses terbatas ke data pribadi (hanya personel yang berwenang).<br/>
+            &nbsp;&nbsp;• Enkripsi dan protokol keamanan untuk melindungi informasi yang ditransmisikan secara online.<br/>
+            Kami menyimpan informasi pribadi Anda hanya selama diperlukan untuk memenuhi tujuan pengumpulan atau mematuhi kewajiban hukum.<br/></span>
+            <hr/><br/>
+            <b>5. Berbagi Informasi Anda</b><br/>
+            <span style={{ fontSize: '14px' }}>Kami tidak menjual, menyewakan, atau memperdagangkan informasi pribadi Anda kepada pihak ketiga. Data Anda hanya dapat dibagikan dalam keadaan berikut:<br/>
+            &nbsp;&nbsp;• Dengan Persetujuan Anda: Ketika Anda secara eksplisit mengizinkan kami untuk berbagi informasi.<br/>
+            &nbsp;&nbsp;• Persyaratan Hukum: Jika diwajibkan oleh hukum, regulasi, atau proses hukum yang sah.<br/>
+            &nbsp;&nbsp;• Penyedia Layanan: Pihak ketiga terpercaya yang membantu kami mengoperasikan alat kutipan (mis., layanan email atau hosting).<br/></span>
+            <hr/><br/>
+            <b>6. Hak Anda</b><br/>
+            <span style={{ fontSize: '14px' }}>Berdasarkan undang-undang perlindungan data yang berlaku, Anda memiliki hak untuk:<br/>
+            &nbsp;&nbsp;• Mengakses informasi pribadi yang kami simpan tentang Anda.<br/>
+            &nbsp;&nbsp;• Memperbaiki ketidakakuratan dalam informasi Anda.<br/>
+            &nbsp;&nbsp;• Meminta penghapusan data Anda jika berlaku.<br/>
+            &nbsp;&nbsp;• Menolak pengolahan data Anda dalam keadaan tertentu.<br/>
+            Untuk menggunakan hak ini atau jika Anda memiliki kekhawatiran terkait privasi, silakan hubungi kami di info@lukemedikal.co.id<br/></span>
+            <hr/><br/>
+            <b>7. Perubahan Kebijakan Ini</b><br/>
+            <span style={{ fontSize: '14px' }}>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu untuk mencerminkan perubahan dalam praktik kami atau persyaratan hukum. Versi yang diperbarui akan diposting di halaman ini dengan "Tanggal Efektif".<br/></span>
+            <hr/><br/>
+            <b>8. Hubungi Kami</b><br/>
+            <span style={{ fontSize: '14px' }}>Jika Anda memiliki pertanyaan atau kekhawatiran tentang Kebijakan Privasi ini atau bagaimana data Anda ditangani, silakan hubungi kami:<br/>
+            Luke Medikal Internasional<br/>
+            <b>Email: info@lukemedikal.co.id<br/>
+            Telepon: +62 21 22604632<br/>
+            Website: https://lukemedikal.co.id</b></span>
+        </p>
+
+      </div>
 
          
           <div className="modal-footer">
