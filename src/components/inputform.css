@@ -1,0 +1,127 @@
+.field_name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .form-control{
+    font-size:14px;
+    height:31px;
+    min-width: 100px; /* Adjust as needed */
+  }
+
+  .plan{
+    border-radius: 12px;
+    overflow: hidden; /* To ensure rounded corners are visible */
+    background-color:black;
+    font-size:14px;
+    text-align: center;
+  }
+    /* .plan th{
+        background-color:#004161;
+    } */
+
+  .dropdown-font {
+    font-size: 12px;  /* Adjust this value to make the font smaller or larger */
+    height:31px;
+
+  }
+  
+  .dropdown-font option {
+    font-size: 12px;  /* Apply the font-size to the options as well */
+  }
+  .table thead tr:nth-child(1) th {
+    background-color: #004161;  /* Set background color to red */
+    color: white;           /* Optional: Set font color to white */
+    font-weight: bold;      /* Optional: Make the text bold */
+  }
+  
+  .table thead tr:nth-child(2) th {
+    background-color: #c9d213;  /* Set background color to red */
+    color:  #004161;           /* Optional: Set font color to white */
+    font-weight: bold;      /* Optional: Make the text bold */
+
+  }
+  .form-select.dropdown-font {
+    min-width: 100px; /* Adjust as needed */
+    white-space: normal; /* Allow wrapping of text */
+    overflow: visible; /* Ensure dropdown fully shows content */
+  }
+  /* Scrollable Modal */
+.modal-dialog {
+  max-width: 1000px; /* Adjust the modal width if needed */
+}
+
+.modal-content {
+  height: 800px; /* Fixed height for the modal */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body {
+  overflow-y: auto; /* Scroll when content exceeds height */
+  flex: 1; /* Allow body to take remaining space */
+  padding: 1rem; /* Adjust padding */
+}
+
+.modal-header,
+.modal-footer {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.responsive-table {
+  overflow-x: auto;  
+  width: 100%;       
+  margin-top: 20px;  
+}
+
+.responsive-table table {
+  width: auto;       
+  min-width: 100%;   
+}
+
+/* Optional: Adds styling to the table to improve visibility */
+.table {
+  white-space: nowrap;  
+}
+
+
+.error-message {
+  color: red;       /* Red text color */
+  font-size: 13px;  /* Smaller font size */
+  background: none; /* No background color */
+  border: none;     /* No border */
+  padding: 0;       /* No padding */
+  margin: 0;        /* No margin */
+}
+
+.success-message {
+  color: green;       /* Red text color */
+  font-size: 13px;  /* Smaller font size */
+  background: none; /* No background color */
+  border: none;     /* No border */
+  padding: 0;       /* No padding */
+  margin: 0;        /* No margin */
+}
+
+.premium{
+  font-size:12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invalid-email {
+  border-color: red;
+}
+
+.invalid-field {
+  border: 1px solid red;
+}
+
+/* Enhanced button with hover effect */
+.enhanced-button {
+  transition: transform 0.3s ease; /* Smooth transform over 300ms */
+}
+
+.enhanced-button:hover {
+  transform: scale(1.15); /* Enlarge the button to 105% of its original size */
+}
