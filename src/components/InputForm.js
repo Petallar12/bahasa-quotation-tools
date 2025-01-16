@@ -305,7 +305,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
   const handleEmailSubmit = async () => {
       // Check if contact information is filled
   if (!contactInfo.fullName || !contactInfo.contactNumber || !validateEmail(contactInfo.emailAddress) || !contactInfo.nationality) {
-    displayMessage("Please fill out all required fields.", "getRates");
+    displayMessage("Harap isi semua bidang yang wajib diisi.", "getRates");
     return; // Don't proceed if contact info is missing
   }
 
@@ -315,7 +315,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
   );
 
   if (missingPolicyInfo) {
-    displayMessage("Please fill out all required fields.", "getRates");
+    displayMessage("Harap isi semua bidang yang wajib diisi.", "getRates");
 
     return; // Don't proceed if policy info is missing
   }
@@ -348,11 +348,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
         "https://bahasa-quotation-tools-backend.vercel.app/send-email", // Updated to deployed backend URL
         emailPayload
       );
-      displayMessage("Email successfully sent!", "submitApplication");
+      displayMessage("Email berhasil dikirim!", "submitApplication");
       setSubmitMessageType("success");
     } catch (error) {
       console.error("Error sending email:", error);
-      displayMessage("Failed to send email.", "submitApplication");
+      displayMessage("Gagal mengirim email.", "submitApplication");
       setSubmitMessageType("error");
     }finally {
       setLoadingState((prev) => ({ ...prev, submitApplication: false })); // Stop loading
