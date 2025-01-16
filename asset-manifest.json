@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bahasa-quotation-tools/static/css/main.9ba8875a.css",
-    "main.js": "/bahasa-quotation-tools/static/js/main.615cd029.js",
+    "main.js": "/bahasa-quotation-tools/static/js/main.d8862514.js",
     "static/js/453.a4a5f1d1.chunk.js": "/bahasa-quotation-tools/static/js/453.a4a5f1d1.chunk.js",
     "static/media/fa-solid-900.ttf": "/bahasa-quotation-tools/static/media/fa-solid-900.ad1782c70927ebc5bc87.ttf",
     "static/media/fa-brands-400.ttf": "/bahasa-quotation-tools/static/media/fa-brands-400.26b80c8830bebf340211.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/bahasa-quotation-tools/static/media/fa-v4compatibility.c3ea317a0f10f201597f.woff2",
     "index.html": "/bahasa-quotation-tools/index.html",
     "main.9ba8875a.css.map": "/bahasa-quotation-tools/static/css/main.9ba8875a.css.map",
-    "main.615cd029.js.map": "/bahasa-quotation-tools/static/js/main.615cd029.js.map",
+    "main.d8862514.js.map": "/bahasa-quotation-tools/static/js/main.d8862514.js.map",
     "453.a4a5f1d1.chunk.js.map": "/bahasa-quotation-tools/static/js/453.a4a5f1d1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ba8875a.css",
-    "static/js/main.615cd029.js"
+    "static/js/main.d8862514.js"
   ]
 }
