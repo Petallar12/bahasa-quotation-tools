@@ -345,7 +345,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
       };
   
       const result = await axios.post(
-        "https://bahasa-quotation-tool-backend.vercel.app/send-email", // Updated to deployed backend URL
+        "https://bahasa-quotation-tools-backend.vercel.app/send-email", // Updated to deployed backend URL
         emailPayload
       );
       displayMessage("Email successfully sent!", "submitApplication");
