@@ -7,17 +7,29 @@ import './inputform.css';
 import BtnLoader from "./BtnLoader";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> */}
 
 
 
 const InputForm = () => {
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  // reCAPTCHA site key (from Google reCAPTCHA Admin Console)
+  const RECAPTCHA_SITE_KEY = "6LeNAL0qAAAAAEhvBO3hC2eSbxjwXN8_dUWzUbG1";
   useEffect(() => {
-    // Initialize tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(tooltipTriggerEl => new Tooltip(tooltipTriggerEl));
+    tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
   }, []);
+
+  const handleCaptchaVerify = (token) => {
+    if (token) {
+      setCaptchaVerified(true);
+    } else {
+      setCaptchaVerified(false);
+    }
+  };
   const [clients, setClients] = useState([
     {
       name: "",
@@ -316,6 +328,10 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
 
   const handleEmailSubmit = async () => {
       // Check if contact information is filled
+      if (!captchaVerified) {
+        toast.error("Harap menyelesaikan CAPTCHA terlebih dahulu.");
+        return;
+      }
   if (!contactInfo.fullName || !contactInfo.contactNumber || !validateEmail(contactInfo.emailAddress) || !contactInfo.nationality) {
     displayMessage("Harap isi semua bidang yang wajib diisi.", "getRates");
     return; // Don't proceed if contact info is missing
@@ -713,6 +729,24 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
           Kebijakan Data Pribadi
         </span>.
       </p>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px" }}>
+  <ReCAPTCHA
+    sitekey={RECAPTCHA_SITE_KEY}
+    onChange={handleCaptchaVerify}
+  />
+  <button
+    onClick={handleEmailSubmit}
+    disabled={loadingState.submitApplication || !captchaVerified} // Disable button until CAPTCHA is verified
+    className="btn btn-success enhanced-button"
+  >
+    {loadingState.submitApplication ? <BtnLoader /> : "Bicara dengan Penjualan"}
+  </button>
+  {showMessage && messageType === "submitApplication" && (
+    <p className={submitMessageType === "success" ? "success-message" : "error-message"}>
+      {message}
+    </p>
+  )}
+</div>
 
 
 {/* Below the Submit Application button */}
