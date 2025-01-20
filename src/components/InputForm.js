@@ -100,6 +100,12 @@ const InputForm = () => {
       setClients(updatedClients);
     }
   };
+  // translate the gender valuue to bahasa
+  const translateGender = (gender) => {
+    if (gender === "Male") return "Laki-laki";
+    if (gender === "Female") return "Perempuan";
+    return ""; // Default empty if gender is not selected
+  };
 
   const handlePlanChange = (index, type, value) => {
     const updatedClients = [...clients];
@@ -607,8 +613,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
         {response.map((rate, index) => (
           <tr key={index}>
             <td>
-              {clients[index].name} ({clients[index].gender},{" "}
-              {clients[index].age}) 
+x``
               {/* {clients[index].country_of_residence} */}
             </td>
             <td>
