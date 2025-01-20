@@ -55,6 +55,18 @@ const InputForm = () => {
     area_of_coverage: "Worldwide",
   });
   const [response, setResponse] = useState([]);
+  //translate gender
+  const translateGender = (gender) => {
+    if (gender === "Male") return "Laki-laki";
+    if (gender === "Female") return "Perempuan";
+    return ""; 
+  };
+//translate area of coverage
+  const areaCoverageTranslation = {
+    "Worldwide": "Seluruh Dunia",
+    "Worldwide excl USA": "Seluruh Dunia kecuali AS",
+    "ASEAN Ex. SG": "ASEAN kec. SG",
+  };
 
   const getFamilyDiscountPercentage = (numDependents) => {
     if (numDependents === 2) {
@@ -566,8 +578,8 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
       {getFamilyDiscountPercentage(clients.length)}%
     </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Area Cakupan: {contactInfo.area_of_coverage}
-    </h5>
+      Area Cakupan: {areaCoverageTranslation[contactInfo.area_of_coverage] || contactInfo.area_of_coverage}
+      </h5>
   </div>  
   </div>   
 
@@ -606,11 +618,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
       <tbody>
         {response.map((rate, index) => (
           <tr key={index}>
-            <td>
-              {clients[index].name} ({clients[index].gender},{" "}
-              {clients[index].age}) 
-              {/* {clients[index].country_of_residence} */}
-            </td>
+            <td>{`${clients[index].name} (${translateGender(clients[index].gender)}, ${clients[index].age})`}</td>
             <td>
               <div className="d-flex gap-2">
                 <select className="form-select dropdown-font" value={clients[index].plans.hs} onChange={(e) => handlePlanChange(index, "hs", e.target.value)}>
@@ -618,7 +626,6 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
                   <option value="Extensive">Ekstensif</option>
                   <option value="Essential">Esensial</option>
                   <option value="Core">Inti</option>
-
                 </select>
                 <select className="form-select dropdown-font" value={clients[index].plans.hs_deductible} onChange={(e) => handlePlanChange(index, "hs_deductible", e.target.value)}>
                   <option value="Nil">Nil</option>
