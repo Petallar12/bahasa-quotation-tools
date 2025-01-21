@@ -392,10 +392,10 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
     <thead>
         <tr>
             <th>Modul</th>
-            <th>Inti</th>
-            <th>Esensial</th>
-            <th>Ekstensif</th>
-            <th>Elit</th>
+            <th>Core</th>
+            <th>Essential</th>
+            <th>Extensive</th>
+            <th>Elite</th>
         </tr>
       </thead>      
       <tbody>
@@ -622,10 +622,10 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td>
               <div className="d-flex gap-2">
                 <select className="form-select dropdown-font" value={clients[index].plans.hs} onChange={(e) => handlePlanChange(index, "hs", e.target.value)}>
-                  <option value="Elite">Elit</option>
-                  <option value="Extensive">Ekstensif</option>
-                  <option value="Essential">Esensial</option>
-                  <option value="Core">Inti</option>
+                  <option value="Elite">Elite</option>
+                  <option value="Extensive">Extensive</option>
+                  <option value="Essential">Essential</option>
+                  <option value="Core">Core</option>
                 </select>
                 <select className="form-select dropdown-font" value={clients[index].plans.hs_deductible} onChange={(e) => handlePlanChange(index, "hs_deductible", e.target.value)}>
                   <option value="Nil">Nil</option>
@@ -640,10 +640,10 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td>
               <div className="d-flex gap-2">
                 <select className="form-select dropdown-font" value={clients[index].plans.op} onChange={(e) => handlePlanChange(index, "op", e.target.value)}>
-                  <option value="Elite">Elit</option>
-                  <option value="Extensive">Ekstensif</option>
-                  <option value="Essential">Esensial</option>
-                  <option value="Core">Inti</option>
+                  <option value="Elite">Elite</option>
+                  <option value="Extensive">Extensive</option>
+                  <option value="Essential">Essential</option>
+                  <option value="Core">Core</option>
 
                 </select>
                 <select className="form-select dropdown-font" value={clients[index].plans.op_co_ins} onChange={(e) => handlePlanChange(index, "op_co_ins", e.target.value)}>
@@ -656,11 +656,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td className="premium">USD {rate.op !== "N/A" ? rate.op.toLocaleString() : "N/A"}</td>
             <td>
               <select className="form-select dropdown-font" value={clients[index].plans.ma} onChange={(e) => handlePlanChange(index, "ma", e.target.value)}>
-                <option value="N/A">Tidak Ada</option>
-                <option value="Elite">Elit</option>
-                <option value="Extensive">Ekstensif</option>
-                <option value="Essential">Esensial</option>
-                <option value="Core">Inti</option>
+                <option value="N/A">N/A</option>
+                  <option value="Elite">Elite</option>
+                  <option value="Extensive">Extensive</option>
+                  <option value="Essential">Essential</option>
+                  <option value="Core">Core</option>
 
               </select>
               {/* Premium: {rate.ma !== "N/A" ? rate.ma.toLocaleString() : "N/A"} */}
@@ -668,11 +668,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
             <td className="premium">USD {rate.ma !== "N/A" ? rate.ma.toLocaleString() : "N/A"}</td>
             <td>
               <select className="form-select dropdown-font" value={clients[index].plans.dn} onChange={(e) => handlePlanChange(index, "dn", e.target.value)}>
-                <option value="N/A">Tidak Ada</option>
-                <option value="Elite">Elit</option>
-                <option value="Extensive">Ekstensif</option>
-                <option value="Essential">Esensial</option>
-                <option value="Core">Inti</option>
+                <option value="N/A">N/A</option>
+                  <option value="Elite">Elite</option>
+                  <option value="Extensive">Extensive</option>
+                  <option value="Essential">Essential</option>
+                  <option value="Core">Core</option>
               </select>
               {/* Premium: {rate.dn !== "N/A" ? rate.dn.toLocaleString() : "N/A"} */}
             </td>
@@ -708,7 +708,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
 
       </form>
       <p className="text-center mt-4" style={{ fontSize: '12px' }}>
-      Dengan melakukan klik pada tombok <b>"Hubungi staff kami’</b>anda menyetujui penggunaan data anda oleh PT Luke Medikal Internasional <br/>dan bersedia untuk dihubungi melalui telepon atau email sehubungan dengan aplikasi asuransi anda. Temukan lebih banyak informasi mengenai <br/>pengunaan data anda di {" "}
+      Dengan melakukan klik pada tombok <b>"Hubungi staff kami’ </b>anda menyetujui penggunaan data anda oleh PT Luke Medikal Internasional <br/>dan bersedia untuk dihubungi melalui telepon atau email sehubungan dengan aplikasi asuransi anda. Temukan lebih banyak informasi mengenai <br/>pengunaan data anda di {" "}
         <span style={{ color: "Red", cursor: "pointer" }} data-bs-toggle="modal" data-bs-target="#personalDataPolicyModal">
         Privacy Policy
         </span>.
