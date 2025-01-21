@@ -378,14 +378,14 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
     <div className="container my-4">
     {/* {showMessage && <p className="alert alert-info">{message}</p>} */}
 
-      <h1 className="text-center mb-2">
+      <h3 className="text-center mb-2">
         {/* I would like to know more about{" "} */}
-        Saya ingin tahu lebih banyak tentang{" "} 
-        <span style={{ color: "#151577" }}>MyHealth</span> {/*Family Discount*/} Diskon Keluarga
-      </h1>
-      <h5 className="text-center mb-2">MyHealth dapat menerima aplikasi dari orang-orang yang berusia 60 tahun atau lebih muda. Untuk mengetahui rencana terbaik dan diskon untuk <br></br>Anda dan keluarga Anda, Anda perlu menyediakan beberapa informasi:</h5>
+        Saya ingin tau lebih banyak tentang produk asuransi {" "} 
+        <span style={{ color: "#151577" }}>MyHealth</span> {/*Family Discount*/} dan diskon untuk keluarga.
+      </h3>
+      <h5 className="text-center mb-2">Produk asuransi MyHealth dari April International dapat menerima aplikasi dari orang berumur 60 tahun atau lebih muda. Untuk mengetahui lebih lanjut mengenai diskon yang tersedia untuk anda dan keluarga anda, pastikan anda mengisi data informasi dibawah ini:</h5>
       <h4 className="text-left mt-4">
-        <span style={{ color: "#151577" }}>Rencana</span>
+        <span style={{ color: "#151577" }}>Plans</span>
       </h4>
       <div className="responsive-table">
   <table className="table table-bordered table-striped mt-3 text-center plan">     
@@ -416,8 +416,8 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
           <td>Rawat Jalan (Opsional)</td>
           <td>$2,000</td>
           <td>$5,000</td>
-          <td>Cakupan Penuh</td>
-          <td>Cakupan Penuh</td>
+          <td>Dijamin Penuh</td>
+          <td>Dijamin Penuh</td>
         </tr>
         <tr>
           <td>Maternitas (Opsional)</td>
@@ -593,23 +593,23 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
           <th>Klien</th>
           <th colSpan={2}>Rumah Sakit & Operasi</th>
           <th colSpan={2}>Rawat Jalan</th>
-          <th colSpan={2}>Maternitas</th>
+          <th colSpan={2}>Kehamilan</th>
           <th colSpan={2}>Dental</th>
           <th>Subtotal</th>
         </tr>
 
         <tr>
           <th></th>
-          <th><div className="d-flex justify-content-between"><span>Rencana & Kamar</span>
+          <th><div className="d-flex justify-content-between"><span>Plans & Kamar</span>
           <span>Pemotongan</span></div></th>
           <th>Premi</th>
           <th><div className="d-flex justify-content-between">
-            <span>Rencana & Kamar</span>
+            <span>Plans & Kamar</span>
           <span>Ko Asuransi.</span></div></th>
           <th>Premi</th>
-          <th>Rencana & Kamar</th>
+          <th>Plans & Kamar</th>
           <th>Premi</th>
-          <th>Rencana & Kamar</th>
+          <th>Plans & Kamar</th>
           <th>Premi</th>
           <th></th>
         </tr>
@@ -701,16 +701,16 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
 )}
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px", }}>
   <button onClick={handleSubmit} disabled={loadingState.getRates} className="btn btn-success enhanced-button">
-    {loadingState.getRates ? <BtnLoader /> : "Hitung"}
+    {loadingState.getRates ? <BtnLoader /> : "Kalkulasi Premi"}
   </button>
   {showMessage && messageType === 'getRates' && <p className="error-message">{message}</p>}
 </div>
 
       </form>
       <p className="text-center mt-4" style={{ fontSize: '12px' }}>
-        Dengan mengklik <b>Bicara dengan Penjualan</b> Anda setuju bahwa data Anda dapat digunakan oleh Medishure untuk menghubungi Anda melalui<br></br>telepon atau email terkait aplikasi asuransi Anda. Temukan lebih banyak informasi mengenai pemrosesan data<br></br>Anda di{" "}
+      Dengan melakukan klik pada tombok <b>"Hubungi staff kami’</b>anda menyetujui penggunaan data anda oleh PT Luke Medikal Internasional <br/>dan bersedia untuk dihubungi melalui telepon atau email sehubungan dengan aplikasi asuransi anda. Temukan lebih banyak informasi mengenai <br/>pengunaan data anda di {" "}
         <span style={{ color: "Red", cursor: "pointer" }} data-bs-toggle="modal" data-bs-target="#personalDataPolicyModal">
-          Kebijakan Data Pribadi
+        Privacy Policy
         </span>.
       </p>
 
@@ -718,7 +718,7 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
 {/* Below the Submit Application button */}
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px" }}>
   <button onClick={handleEmailSubmit} disabled={loadingState.submitApplication} className="btn btn-success enhanced-button">
-    {loadingState.submitApplication ? <BtnLoader /> : "Bicara dengan Penjualan"}
+    {loadingState.submitApplication ? <BtnLoader /> : "Hubungi Staff Kami"}
   </button>
   {showMessage && messageType === 'submitApplication' &&         <p className={submitMessageType === 'success' ? 'success-message' : 'error-message'}>
   {message}</p>}
