@@ -125,3 +125,7 @@
 .enhanced-button:hover {
   transform: scale(1.15); /* Enlarge the button to 105% of its original size */
 }
+
+h2{
+  font-size:31px;
+}

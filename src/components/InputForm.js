@@ -378,11 +378,11 @@ setLoadingState((prev) => ({ ...prev, getRates: true })); // Start loading for G
     <div className="container my-4">
     {/* {showMessage && <p className="alert alert-info">{message}</p>} */}
 
-      <h3 className="text-center mb-2">
+      <h2 className="text-center mb-2">
         {/* I would like to know more about{" "} */}
         Saya ingin tau lebih banyak tentang produk asuransi {" "} 
         <span style={{ color: "#151577" }}>MyHealth</span> {/*Family Discount*/} dan diskon untuk keluarga.
-      </h3>
+      </h2>
       <h5 className="text-center mb-2">Produk asuransi MyHealth dari April International dapat menerima aplikasi dari orang berumur 60 tahun atau lebih muda. Untuk mengetahui lebih lanjut mengenai diskon yang tersedia untuk anda dan keluarga anda, pastikan anda mengisi data informasi dibawah ini:</h5>
       <h4 className="text-left mt-4">
         <span style={{ color: "#151577" }}>Plans</span>
